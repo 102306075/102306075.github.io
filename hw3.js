@@ -5,41 +5,34 @@ function begin()
 
 	$("#content").text("0");
 
-	$("#button0").click(numberadd);
-	$("#button1").click(numberadd);
-	$("#button2").click(numberadd);
-	$("#button3").click(numberadd);
-	$("#button4").click(numberadd);
-	$("#button5").click(numberadd);
-	$("#button6").click(numberadd);
-	$("#button7").click(numberadd);
-	$("#button8").click(numberadd);
-	$("#button9").click(numberadd);
+	$("#0").click(numberadd);
+	$("#1").click(numberadd);
+	$("#2").click(numberadd);
+	$("#3").click(numberadd);
+	$("#4").click(numberadd);
+	$("#5").click(numberadd);
+	$("#6").click(numberadd);
+	$("#7").click(numberadd);
+	$("#8").click(numberadd);
+	$("#9").click(numberadd);
 	$("#clear").click(return0);
-	$("#button9").click(numberadd);
-	$("#button9").click(numberadd);
-	$("#button9").click(numberadd);
+
 }
 
-
-var prev_num,prev_op;
 
 function numberadd(){
 		//alert("test2");
 		var testif0 = $("#content").text();
-		if (testif0 !="0")
-			$("#content").text(testif0+$(this).text);
+		if (testif0 ==="0")
+			$("#content").text(event.target.id.charAt(0));
 		else
-			$("#content").text($(this).text));
+			$("#content").text(testif0+event.target.id.charAt(0));
 	}
 function getnowcontent(){
 	return $("#content").text();
 }
 
 function return0(){
-	alert("test3");
-	prev_num=0.0;
-	prev_op="";
 	
 	$("#content").text("0");
 }
