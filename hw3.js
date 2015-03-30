@@ -1,24 +1,4 @@
-$(document).ready(begin);
-
-function begin()
-{
-
-	$("#content").text("0");
-
-	$("#0").click(numberadd);
-	$("#1").click(numberadd);
-	$("#2").click(numberadd);
-	$("#3").click(numberadd);
-	$("#4").click(numberadd);
-	$("#5").click(numberadd);
-	$("#6").click(numberadd);
-	$("#7").click(numberadd);
-	$("#8").click(numberadd);
-	$("#9").click(numberadd);
-	$("#clear").click(return0);
-
-}
-
+$(function()  {
 
 function numberadd(){
 		//alert("test2");
@@ -32,7 +12,33 @@ function getnowcontent(){
 	return $("#content").text();
 }
 
-function return0(){
+function clear(){
 	
 	$("#content").text("0");
 }
+function plus(){
+	var number1 = $("#content").text();
+
+	$("#content").text(0);
+
+}
+function equal(){
+	var number2 =$("#content").text();
+	var c=(number1+number2).toString();
+	$("#content").text(c);
+}
+
+$('#1').on('click',function(){ numberadd(); });
+$('#2').on('click',function(){ numberadd(); });
+$('#3').on('click',function(){ numberadd(); });
+$('#4').on('click',function(){ numberadd(); });
+$('#5').on('click',function(){ numberadd(); });
+$('#6').on('click',function(){ numberadd(); });
+$('#7').on('click',function(){ numberadd(); });
+$('#8').on('click',function(){ numberadd(); });
+$('#9').on('click',function(){ numberadd(); });
+$('#0').on('click',function(){ numberadd(); });
+$('#plus').on('click',function(){ plus(); });
+$('#clear').on('click',function(){ clear(); });
+
+});
